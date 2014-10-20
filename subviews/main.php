@@ -11,7 +11,9 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="/css/cerullean.bootstrap.min.css"> 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="//yandex.st/jquery/2.0.3/jquery.min.js"></script>
+<script src="//yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+<script src="//yastatic.net/jquery-ui/1.11.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://yastatic.net/jquery-ui/1.11.1/themes/smoothness/jquery-ui.min.css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <!-- Here is where we include a subtemplate -->

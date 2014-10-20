@@ -4,25 +4,28 @@
         <div class="panel-body">
         <div class="row">
             <script>
-			  function choose(offset){
-				$.ajax({
-					url: "ajax.php?action=getback" ,data: {
-                      "curimg": $('#image>img').attr('src'), 
-                      "offset" : offset}
-				}).success(function( msg ) {
-					$('#image').empty().html(msg);
-				});
-			  }
+             $(function() {
+            $("#slider-range-max" ).slider({
+            range: "max",
+            min: 0,
+            max: 360,
+            value: 2,
+            slide: function( event, ui ) {
+                $( "#amount" ).val( ui.value );
+                }
+            });
+            $( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
+            });
             </script>
-            <div class="col col-lg-1">
-                    <a href= "javascript:choose('prev');" class="btn btn-default btn-lg">&lt;</a>
-            </div>
-            <div class="col col-lg-10" id="image">
-            <img src="/torque/images/loading.gif">
-            </div>
-            <div class="col col-lg-1">
-                    <a href= "javascript:choose('next');" class="btn btn-default btn-lg">&gt;</a>
-            </div>
+            <p>
+            <label for="amount">Minimum number of bedrooms:</label>
+            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+            <div id="slider-range-max"></div>
+            <p>
+            after
+            </p>
+            
         </div>
         </div>
     </div>
